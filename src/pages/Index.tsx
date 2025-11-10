@@ -182,9 +182,7 @@ export default function Index() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="animate-fade-in order-2 md:order-1">
               <Badge className="mb-4">О логопеде</Badge>
-              <h2 className="text-4xl md:text-5xl font-bold mb-6">
-                Ваше имя
-              </h2>
+              <h2 className="text-4xl md:text-5xl font-bold mb-6">Евсеева Елена Сергеевна</h2>
               <p className="text-lg text-muted-foreground mb-4">
                 Учитель-логопед высшей квалификационной категории
               </p>
