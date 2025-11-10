@@ -664,7 +664,13 @@ export default function Index() {
                   <Icon name="Clock" size={24} />
                 </div>
                 <CardTitle>Часы работы</CardTitle>
-                <CardDescription className="text-base">Пн, Пт: 9:00-13:00, Вт,Ср, Чтв. 13:00-17:00, Сб-Вс: Выходной</CardDescription>
+                <CardDescription className="text-base">
+                  Пн, Пт: 9:00 - 13:00
+                  <br />
+                  Вт, Ср, Чт: 13:00 - 17:00
+                  <br />
+                  Сб-Вс: Выходной
+                </CardDescription>
               </CardHeader>
             </Card>
           </div>
