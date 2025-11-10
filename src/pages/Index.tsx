@@ -644,9 +644,7 @@ export default function Index() {
                   <Icon name="Mail" size={24} />
                 </div>
                 <CardTitle>Email</CardTitle>
-                <CardDescription className="text-base">
-                  logoped@dou.ru
-                </CardDescription>
+                <CardDescription className="text-base">alij1981@mail.ru</CardDescription>
               </CardHeader>
             </Card>
 
