@@ -1,0 +1,43 @@
+{
+  "tests": [
+    {
+      "name": "Get all materials list",
+      "method": "GET",
+      "path": "/",
+      "expectedStatus": 200,
+      "expectedBody": {
+        "total": 5
+      },
+      "bodyMatcher": "partial"
+    },
+    {
+      "name": "Get specific material info",
+      "method": "GET",
+      "path": "/?id=articulation",
+      "expectedStatus": 200,
+      "expectedBody": {
+        "id": "articulation",
+        "name": "string",
+        "filename": "string",
+        "download_url": "string"
+      },
+      "bodyMatcher": "partial"
+    },
+    {
+      "name": "Handle OPTIONS for CORS",
+      "method": "OPTIONS",
+      "path": "/",
+      "expectedStatus": 200
+    },
+    {
+      "name": "Return 404 for unknown material",
+      "method": "GET",
+      "path": "/?id=unknown",
+      "expectedStatus": 404,
+      "expectedBody": {
+        "error": "Material not found"
+      },
+      "bodyMatcher": "partial"
+    }
+  ]
+}

@@ -5,8 +5,25 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/
 import { Badge } from '@/components/ui/badge';
 import Icon from '@/components/ui/icon';
 
+const BACKEND_URL = 'https://functions.poehali.dev/4a75476f-857b-4505-813c-ced5409e0204';
+
 export default function Index() {
   const [activeSection, setActiveSection] = useState('home');
+
+  const handleDownload = async (materialId: string, materialName: string) => {
+    try {
+      const response = await fetch(`${BACKEND_URL}?id=${materialId}`);
+      const data = await response.json();
+      
+      if (response.ok) {
+        alert(`📥 ${data.name}\n\nРазмер: ${data.size}\n\n${data.message}`);
+      } else {
+        alert('Ошибка при скачивании материала');
+      }
+    } catch (error) {
+      alert('Произошла ошибка. Попробуйте позже.');
+    }
+  };
 
   const scrollToSection = (sectionId: string) => {
     setActiveSection(sectionId);
@@ -318,7 +335,7 @@ export default function Index() {
                     <CardDescription className="mb-4">
                       Комплекс упражнений для развития речевого аппарата. 12 страниц с иллюстрациями.
                     </CardDescription>
-                    <Button variant="outline" className="gap-2">
+                    <Button variant="outline" className="gap-2" onClick={() => handleDownload('articulation', 'Артикуляционная гимнастика')}>
                       <Icon name="Download" size={16} />
                       Скачать PDF
                     </Button>
@@ -338,7 +355,7 @@ export default function Index() {
                     <CardDescription className="mb-4">
                       30+ игр для развития речи детей 3-7 лет. Можно играть всей семьей.
                     </CardDescription>
-                    <Button variant="outline" className="gap-2">
+                    <Button variant="outline" className="gap-2" onClick={() => handleDownload('games', 'Логопедические игры')}>
                       <Icon name="Download" size={16} />
                       Скачать PDF
                     </Button>
@@ -358,7 +375,7 @@ export default function Index() {
                     <CardDescription className="mb-4">
                       Подборка для автоматизации всех звуков русского языка.
                     </CardDescription>
-                    <Button variant="outline" className="gap-2">
+                    <Button variant="outline" className="gap-2" onClick={() => handleDownload('tongue-twisters', 'Чистоговорки и скороговорки')}>
                       <Icon name="Download" size={16} />
                       Скачать PDF
                     </Button>
@@ -378,7 +395,7 @@ export default function Index() {
                     <CardDescription className="mb-4">
                       Задания для развития фонематического слуха и мелкой моторики.
                     </CardDescription>
-                    <Button variant="outline" className="gap-2">
+                    <Button variant="outline" className="gap-2" onClick={() => handleDownload('workbooks', 'Рабочие тетради')}>
                       <Icon name="Download" size={16} />
                       Скачать PDF
                     </Button>
@@ -398,7 +415,7 @@ export default function Index() {
                     <CardDescription className="mb-4">
                       Упражнения для развития речевого дыхания с пошаговыми инструкциями.
                     </CardDescription>
-                    <Button variant="outline" className="gap-2">
+                    <Button variant="outline" className="gap-2" onClick={() => handleDownload('breathing', 'Дыхательная гимнастика')}>
                       <Icon name="Download" size={16} />
                       Скачать PDF
                     </Button>
