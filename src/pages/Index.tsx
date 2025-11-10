@@ -634,9 +634,7 @@ export default function Index() {
                   <Icon name="Phone" size={24} />
                 </div>
                 <CardTitle>Телефон</CardTitle>
-                <CardDescription className="text-base">
-                  +7 (999) 123-45-67
-                </CardDescription>
+                <CardDescription className="text-base">+7 (950) 136-60-13</CardDescription>
               </CardHeader>
             </Card>
 
