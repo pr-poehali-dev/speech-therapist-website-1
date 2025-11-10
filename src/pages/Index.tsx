@@ -654,11 +654,7 @@ export default function Index() {
                   <Icon name="MapPin" size={24} />
                 </div>
                 <CardTitle>Адрес</CardTitle>
-                <CardDescription className="text-base">
-                  г. Москва, ул. Детская, д. 15
-                  <br />
-                  МБДОУ "Детский сад №123"
-                </CardDescription>
+                <CardDescription className="text-base">Иркутская область, Чунский район, р.п.Лесогорск, ул. Мелиораторов, 27 МДОБУ "Детский сад № 16 р.п.Лесогорск"</CardDescription>
               </CardHeader>
             </Card>
 
