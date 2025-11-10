@@ -92,7 +92,7 @@ export default function Index() {
               <span className="font-bold text-xl text-foreground">Логопедия в ДОУ</span>
             </div>
             <div className="hidden md:flex gap-6">
-              {['Главная', 'Методики', 'Расписание', 'Родителям', 'Контакты'].map((item) => (
+              {['Главная', 'Методики', 'Успехи', 'Материалы', 'Расписание', 'Родителям', 'Контакты'].map((item) => (
                 <button
                   key={item}
                   onClick={() => scrollToSection(item.toLowerCase())}
@@ -203,6 +203,263 @@ export default function Index() {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section id="успехи" className="py-16 px-4">
+        <div className="container mx-auto">
+          <div className="text-center mb-12 animate-fade-in">
+            <Badge className="mb-4">Успехи учеников</Badge>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">
+              Наши достижения
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Каждый ребенок уникален, и каждый успех - это маленькая победа
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-6 mb-12">
+            <Card className="overflow-hidden hover:shadow-lg transition-shadow animate-slide-up">
+              <div className="relative h-64">
+                <img
+                  src="https://cdn.poehali.dev/projects/cb36eb85-ae57-4cae-b98f-fed5b756a9f6/files/81c3e6c6-8c5c-4be6-a0c7-c6d9b20d10e4.jpg"
+                  alt="Успехи детей"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <CardHeader>
+                <CardTitle className="text-xl">Группа "Звездочки"</CardTitle>
+                <CardDescription>
+                  15 детей научились правильно произносить звук "Р" за 4 месяца занятий
+                </CardDescription>
+              </CardHeader>
+            </Card>
+
+            <Card className="overflow-hidden hover:shadow-lg transition-shadow animate-slide-up" style={{ animationDelay: '100ms' }}>
+              <div className="relative h-64 bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center">
+                <div className="text-center p-6">
+                  <div className="text-6xl font-bold text-primary mb-2">92%</div>
+                  <p className="text-lg font-medium">детей полностью исправили речевые нарушения</p>
+                </div>
+              </div>
+              <CardHeader>
+                <CardTitle className="text-xl">Статистика 2024</CardTitle>
+                <CardDescription>
+                  Результаты работы за текущий учебный год
+                </CardDescription>
+              </CardHeader>
+            </Card>
+
+            <Card className="overflow-hidden hover:shadow-lg transition-shadow animate-slide-up" style={{ animationDelay: '200ms' }}>
+              <div className="relative h-64 bg-gradient-to-br from-accent/20 to-primary/20 flex items-center justify-center">
+                <div className="text-center p-6">
+                  <div className="text-6xl mb-4">🏆</div>
+                  <p className="text-lg font-medium">Победители городского конкурса чтецов</p>
+                </div>
+              </div>
+              <CardHeader>
+                <CardTitle className="text-xl">Конкурсы</CardTitle>
+                <CardDescription>
+                  5 воспитанников стали призерами городских мероприятий
+                </CardDescription>
+              </CardHeader>
+            </Card>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-6">
+            <Card className="bg-gradient-to-br from-primary/5 to-secondary/5 border-2 border-primary/20 animate-fade-in">
+              <CardHeader>
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                    <Icon name="Quote" size={24} className="text-primary" />
+                  </div>
+                  <div>
+                    <CardTitle className="mb-2">Отзыв родителей</CardTitle>
+                    <CardDescription className="text-base">
+                      "Спасибо огромное! Наш Саша в 5 лет не выговаривал половину звуков. 
+                      За полгода занятий речь стала чистой и понятной. Теперь он с удовольствием 
+                      рассказывает стихи!"
+                    </CardDescription>
+                    <p className="text-sm text-muted-foreground mt-3">— Мама Саши, средняя группа</p>
+                  </div>
+                </div>
+              </CardHeader>
+            </Card>
+
+            <Card className="bg-gradient-to-br from-secondary/5 to-accent/5 border-2 border-secondary/20 animate-fade-in">
+              <CardHeader>
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 rounded-full bg-secondary/10 flex items-center justify-center flex-shrink-0">
+                    <Icon name="Heart" size={24} className="text-secondary" />
+                  </div>
+                  <div>
+                    <CardTitle className="mb-2">Благодарность</CardTitle>
+                    <CardDescription className="text-base">
+                      "Наша Маша была очень застенчивой и боялась говорить. Благодаря игровым 
+                      занятиям она раскрылась, речь улучшилась, и появилась уверенность в себе!"
+                    </CardDescription>
+                    <p className="text-sm text-muted-foreground mt-3">— Родители Маши, старшая группа</p>
+                  </div>
+                </div>
+              </CardHeader>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      <section id="материалы" className="py-16 px-4 bg-muted/30">
+        <div className="container mx-auto max-w-5xl">
+          <div className="text-center mb-12 animate-fade-in">
+            <Badge className="mb-4">Полезные материалы</Badge>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">
+              Скачайте бесплатно
+            </h2>
+            <p className="text-lg text-muted-foreground">
+              Методические пособия и упражнения для занятий дома
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-6">
+            <Card className="hover:shadow-lg transition-all duration-300 hover:-translate-y-1 animate-slide-up">
+              <CardHeader>
+                <div className="flex items-start gap-4">
+                  <div className="w-14 h-14 rounded-xl bg-primary/10 text-primary flex items-center justify-center flex-shrink-0">
+                    <Icon name="FileText" size={28} />
+                  </div>
+                  <div className="flex-1">
+                    <CardTitle className="mb-2">Артикуляционная гимнастика</CardTitle>
+                    <CardDescription className="mb-4">
+                      Комплекс упражнений для развития речевого аппарата. 12 страниц с иллюстрациями.
+                    </CardDescription>
+                    <Button variant="outline" className="gap-2">
+                      <Icon name="Download" size={16} />
+                      Скачать PDF
+                    </Button>
+                  </div>
+                </div>
+              </CardHeader>
+            </Card>
+
+            <Card className="hover:shadow-lg transition-all duration-300 hover:-translate-y-1 animate-slide-up" style={{ animationDelay: '100ms' }}>
+              <CardHeader>
+                <div className="flex items-start gap-4">
+                  <div className="w-14 h-14 rounded-xl bg-secondary/10 text-secondary flex items-center justify-center flex-shrink-0">
+                    <Icon name="BookOpen" size={28} />
+                  </div>
+                  <div className="flex-1">
+                    <CardTitle className="mb-2">Логопедические игры</CardTitle>
+                    <CardDescription className="mb-4">
+                      30+ игр для развития речи детей 3-7 лет. Можно играть всей семьей.
+                    </CardDescription>
+                    <Button variant="outline" className="gap-2">
+                      <Icon name="Download" size={16} />
+                      Скачать PDF
+                    </Button>
+                  </div>
+                </div>
+              </CardHeader>
+            </Card>
+
+            <Card className="hover:shadow-lg transition-all duration-300 hover:-translate-y-1 animate-slide-up" style={{ animationDelay: '200ms' }}>
+              <CardHeader>
+                <div className="flex items-start gap-4">
+                  <div className="w-14 h-14 rounded-xl bg-accent/10 text-accent flex items-center justify-center flex-shrink-0">
+                    <Icon name="Music" size={28} />
+                  </div>
+                  <div className="flex-1">
+                    <CardTitle className="mb-2">Чистоговорки и скороговорки</CardTitle>
+                    <CardDescription className="mb-4">
+                      Подборка для автоматизации всех звуков русского языка.
+                    </CardDescription>
+                    <Button variant="outline" className="gap-2">
+                      <Icon name="Download" size={16} />
+                      Скачать PDF
+                    </Button>
+                  </div>
+                </div>
+              </CardHeader>
+            </Card>
+
+            <Card className="hover:shadow-lg transition-all duration-300 hover:-translate-y-1 animate-slide-up" style={{ animationDelay: '300ms' }}>
+              <CardHeader>
+                <div className="flex items-start gap-4">
+                  <div className="w-14 h-14 rounded-xl bg-primary/10 text-primary flex items-center justify-center flex-shrink-0">
+                    <Icon name="Pencil" size={28} />
+                  </div>
+                  <div className="flex-1">
+                    <CardTitle className="mb-2">Рабочие тетради</CardTitle>
+                    <CardDescription className="mb-4">
+                      Задания для развития фонематического слуха и мелкой моторики.
+                    </CardDescription>
+                    <Button variant="outline" className="gap-2">
+                      <Icon name="Download" size={16} />
+                      Скачать PDF
+                    </Button>
+                  </div>
+                </div>
+              </CardHeader>
+            </Card>
+
+            <Card className="hover:shadow-lg transition-all duration-300 hover:-translate-y-1 animate-slide-up" style={{ animationDelay: '400ms' }}>
+              <CardHeader>
+                <div className="flex items-start gap-4">
+                  <div className="w-14 h-14 rounded-xl bg-secondary/10 text-secondary flex items-center justify-center flex-shrink-0">
+                    <Icon name="Wind" size={28} />
+                  </div>
+                  <div className="flex-1">
+                    <CardTitle className="mb-2">Дыхательная гимнастика</CardTitle>
+                    <CardDescription className="mb-4">
+                      Упражнения для развития речевого дыхания с пошаговыми инструкциями.
+                    </CardDescription>
+                    <Button variant="outline" className="gap-2">
+                      <Icon name="Download" size={16} />
+                      Скачать PDF
+                    </Button>
+                  </div>
+                </div>
+              </CardHeader>
+            </Card>
+
+            <Card className="hover:shadow-lg transition-all duration-300 hover:-translate-y-1 animate-slide-up" style={{ animationDelay: '500ms' }}>
+              <CardHeader>
+                <div className="flex items-start gap-4">
+                  <div className="w-14 h-14 rounded-xl bg-accent/10 text-accent flex items-center justify-center flex-shrink-0">
+                    <Icon name="Video" size={28} />
+                  </div>
+                  <div className="flex-1">
+                    <CardTitle className="mb-2">Видеоуроки для родителей</CardTitle>
+                    <CardDescription className="mb-4">
+                      Как правильно заниматься с ребенком дома. 10 коротких видео.
+                    </CardDescription>
+                    <Button variant="outline" className="gap-2">
+                      <Icon name="ExternalLink" size={16} />
+                      Смотреть онлайн
+                    </Button>
+                  </div>
+                </div>
+              </CardHeader>
+            </Card>
+          </div>
+
+          <Card className="mt-8 bg-gradient-to-r from-primary to-secondary text-white animate-fade-in">
+            <CardContent className="p-8">
+              <div className="flex flex-col md:flex-row items-center gap-6">
+                <div className="w-16 h-16 rounded-full bg-white/20 flex items-center justify-center flex-shrink-0">
+                  <Icon name="Bell" size={32} />
+                </div>
+                <div className="flex-1 text-center md:text-left">
+                  <h3 className="text-2xl font-bold mb-2">Получайте новые материалы первыми</h3>
+                  <p className="text-white/90">
+                    Регулярно добавляю новые пособия и упражнения. Следите за обновлениями!
+                  </p>
+                </div>
+                <Button size="lg" variant="secondary" className="gap-2 flex-shrink-0">
+                  <Icon name="Mail" size={20} />
+                  Подписаться
+                </Button>
+              </div>
+            </CardContent>
+          </Card>
         </div>
       </section>
 
