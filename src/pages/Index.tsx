@@ -122,7 +122,7 @@ export default function Index() {
               <span className="font-bold text-xl text-foreground">Логопедия в ДОУ</span>
             </div>
             <div className="hidden md:flex gap-6">
-              {['Главная', 'Методики', 'Успехи', 'Материалы', 'Расписание', 'Родителям', 'Контакты'].map((item) => (
+              {['Главная', 'О логопеде', 'Методики', 'Успехи', 'Материалы', 'Расписание', 'Родителям', 'Контакты'].map((item) => (
                 <button
                   key={item}
                   onClick={() => scrollToSection(item.toLowerCase())}
@@ -172,6 +172,62 @@ export default function Index() {
                 alt="Логопедия"
                 className="relative rounded-3xl shadow-2xl w-full"
               />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="о логопеде" className="py-16 px-4">
+        <div className="container mx-auto max-w-6xl">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="animate-fade-in order-2 md:order-1">
+              <Badge className="mb-4">О логопеде</Badge>
+              <h2 className="text-4xl md:text-5xl font-bold mb-6">
+                Ваше имя
+              </h2>
+              <p className="text-lg text-muted-foreground mb-4">
+                Учитель-логопед высшей квалификационной категории
+              </p>
+              <div className="space-y-4 mb-6">
+                <div className="flex items-start gap-3">
+                  <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-1">
+                    <Icon name="GraduationCap" size={20} className="text-primary" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold mb-1">Образование</h4>
+                    <p className="text-muted-foreground">Высшее педагогическое образование, специальность "Логопедия"</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-1">
+                    <Icon name="Award" size={20} className="text-primary" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold mb-1">Опыт работы</h4>
+                    <p className="text-muted-foreground">Более 7 лет работы с детьми дошкольного возраста</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-1">
+                    <Icon name="Star" size={20} className="text-primary" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold mb-1">Достижения</h4>
+                    <p className="text-muted-foreground">200+ детей получили помощь, 98% родителей довольны результатами</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div className="animate-slide-up order-1 md:order-2">
+              <div className="relative">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-3xl blur-3xl"></div>
+                <img
+                  src="https://cdn.poehali.dev/projects/cb36eb85-ae57-4cae-b98f-fed5b756a9f6/files/7c66309a-8703-4a04-abc9-28e4db339271.jpg"
+                  alt="Учитель-логопед"
+                  className="relative rounded-3xl shadow-2xl w-full object-cover h-[500px]"
+                />
+              </div>
             </div>
           </div>
         </div>
