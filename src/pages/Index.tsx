@@ -380,10 +380,10 @@ export default function Index() {
               </div>
             </Card>
 
-            <Card className="overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1 animate-slide-up cursor-pointer group" style={{ animationDelay: '200ms' }} onClick={() => setSelectedImage({ url: 'https://cdn.poehali.dev/projects/cb36eb85-ae57-4cae-b98f-fed5b756a9f6/files/44cd36ad-3d22-4b55-b784-3ccf1d78ca69.jpg', title: 'Групповые занятия' })}>
+            <Card className="overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1 animate-slide-up cursor-pointer group" style={{ animationDelay: '200ms' }} onClick={() => setSelectedImage({ url: 'https://cdn.poehali.dev/files/ac917d4f-8fec-4a64-a984-20208037fed0.png', title: 'Групповые занятия' })}>
               <div className="relative h-72 overflow-hidden">
                 <img
-                  src="https://cdn.poehali.dev/projects/cb36eb85-ae57-4cae-b98f-fed5b756a9f6/files/44cd36ad-3d22-4b55-b784-3ccf1d78ca69.jpg"
+                  src="https://cdn.poehali.dev/files/ac917d4f-8fec-4a64-a984-20208037fed0.png"
                   alt="Групповые занятия"
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                 />
