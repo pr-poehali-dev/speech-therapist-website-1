@@ -526,11 +526,17 @@ export default function Index() {
                 <Icon name="Info" size={24} className="text-primary" />
               </div>
               <div>
-                <h4 className="font-semibold mb-2">Важно знать</h4>
-                <p className="text-sm text-muted-foreground">
-                  Продолжительность занятия 20-30 минут в зависимости от возраста. 
-                  Индивидуальные занятия по предварительной записи.
-                </p>
+                <h4 className="font-semibold text-lg mb-3">Важно знать</h4>
+                <div className="space-y-2">
+                  <p className="text-sm text-muted-foreground flex items-start gap-2">
+                    <Icon name="User" size={16} className="text-primary mt-0.5 flex-shrink-0" />
+                    <span><strong>Индивидуальные занятия:</strong> 20 минут, 2 раза в неделю</span>
+                  </p>
+                  <p className="text-sm text-muted-foreground flex items-start gap-2">
+                    <Icon name="Users" size={16} className="text-primary mt-0.5 flex-shrink-0" />
+                    <span><strong>Групповые занятия:</strong> 30 минут, 3 раза в неделю</span>
+                  </p>
+                </div>
               </div>
             </div>
           </div>
