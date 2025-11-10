@@ -225,100 +225,101 @@ export default function Index() {
       <section id="успехи" className="py-16 px-4">
         <div className="container mx-auto">
           <div className="text-center mb-12 animate-fade-in">
-            <Badge className="mb-4">Успехи учеников</Badge>
+            <Badge className="mb-4">Фото и видео</Badge>
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              Наши достижения
+              Галерея
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Каждый ребенок уникален, и каждый успех - это маленькая победа
+              Наши занятия, мероприятия и будни в детском саду
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6 mb-12">
-            <Card className="overflow-hidden hover:shadow-lg transition-shadow animate-slide-up">
-              <div className="relative h-64">
+          <div className="grid md:grid-cols-3 gap-6 mb-8">
+            <Card className="overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1 animate-slide-up cursor-pointer group">
+              <div className="relative h-72 overflow-hidden">
+                <img
+                  src="https://cdn.poehali.dev/projects/cb36eb85-ae57-4cae-b98f-fed5b756a9f6/files/770c23a4-9cce-4911-9a8d-bb25c302aaf8.jpg"
+                  alt="Кабинет логопеда"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                  <p className="text-white font-medium">Кабинет логопеда</p>
+                </div>
+              </div>
+            </Card>
+
+            <Card className="overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1 animate-slide-up cursor-pointer group" style={{ animationDelay: '100ms' }}>
+              <div className="relative h-72 overflow-hidden">
+                <img
+                  src="https://cdn.poehali.dev/projects/cb36eb85-ae57-4cae-b98f-fed5b756a9f6/files/c66aa284-e54a-4bd5-9da2-2abc6f46fa39.jpg"
+                  alt="Индивидуальное занятие"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                  <p className="text-white font-medium">Индивидуальное занятие</p>
+                </div>
+              </div>
+            </Card>
+
+            <Card className="overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1 animate-slide-up cursor-pointer group" style={{ animationDelay: '200ms' }}>
+              <div className="relative h-72 overflow-hidden">
+                <img
+                  src="https://cdn.poehali.dev/projects/cb36eb85-ae57-4cae-b98f-fed5b756a9f6/files/44cd36ad-3d22-4b55-b784-3ccf1d78ca69.jpg"
+                  alt="Групповые занятия"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                  <p className="text-white font-medium">Групповые занятия</p>
+                </div>
+              </div>
+            </Card>
+
+            <Card className="overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1 animate-slide-up cursor-pointer group" style={{ animationDelay: '300ms' }}>
+              <div className="relative h-72 overflow-hidden">
                 <img
                   src="https://cdn.poehali.dev/projects/cb36eb85-ae57-4cae-b98f-fed5b756a9f6/files/81c3e6c6-8c5c-4be6-a0c7-c6d9b20d10e4.jpg"
                   alt="Успехи детей"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                 />
-              </div>
-              <CardHeader>
-                <CardTitle className="text-xl">Группа "Звездочки"</CardTitle>
-                <CardDescription>
-                  15 детей научились правильно произносить звук "Р" за 4 месяца занятий
-                </CardDescription>
-              </CardHeader>
-            </Card>
-
-            <Card className="overflow-hidden hover:shadow-lg transition-shadow animate-slide-up" style={{ animationDelay: '100ms' }}>
-              <div className="relative h-64 bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center">
-                <div className="text-center p-6">
-                  <div className="text-6xl font-bold text-primary mb-2">92%</div>
-                  <p className="text-lg font-medium">детей полностью исправили речевые нарушения</p>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                  <p className="text-white font-medium">Успехи наших детей</p>
                 </div>
               </div>
-              <CardHeader>
-                <CardTitle className="text-xl">Статистика 2024</CardTitle>
-                <CardDescription>
-                  Результаты работы за текущий учебный год
-                </CardDescription>
-              </CardHeader>
             </Card>
 
-            <Card className="overflow-hidden hover:shadow-lg transition-shadow animate-slide-up" style={{ animationDelay: '200ms' }}>
-              <div className="relative h-64 bg-gradient-to-br from-accent/20 to-primary/20 flex items-center justify-center">
-                <div className="text-center p-6">
-                  <div className="text-6xl mb-4">🏆</div>
-                  <p className="text-lg font-medium">Победители городского конкурса чтецов</p>
+            <Card className="overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1 animate-slide-up cursor-pointer group" style={{ animationDelay: '400ms' }}>
+              <div className="relative h-72 overflow-hidden">
+                <img
+                  src="https://cdn.poehali.dev/projects/cb36eb85-ae57-4cae-b98f-fed5b756a9f6/files/7c66309a-8703-4a04-abc9-28e4db339271.jpg"
+                  alt="Логопедические материалы"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                  <p className="text-white font-medium">Дидактические материалы</p>
                 </div>
               </div>
-              <CardHeader>
-                <CardTitle className="text-xl">Конкурсы</CardTitle>
-                <CardDescription>
-                  5 воспитанников стали призерами городских мероприятий
-                </CardDescription>
-              </CardHeader>
+            </Card>
+
+            <Card className="overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1 animate-slide-up cursor-pointer group bg-gradient-to-br from-primary/10 to-secondary/10" style={{ animationDelay: '500ms' }}>
+              <div className="relative h-72 flex flex-col items-center justify-center p-8 text-center">
+                <div className="w-20 h-20 rounded-full bg-primary/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                  <Icon name="Video" size={40} className="text-primary" />
+                </div>
+                <h3 className="text-2xl font-bold mb-2">Видео занятий</h3>
+                <p className="text-muted-foreground mb-4">Посмотрите, как проходят наши занятия</p>
+                <Button variant="outline" className="gap-2">
+                  <Icon name="Play" size={16} />
+                  Смотреть видео
+                </Button>
+              </div>
             </Card>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-6">
-            <Card className="bg-gradient-to-br from-primary/5 to-secondary/5 border-2 border-primary/20 animate-fade-in">
-              <CardHeader>
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                    <Icon name="Quote" size={24} className="text-primary" />
-                  </div>
-                  <div>
-                    <CardTitle className="mb-2">Отзыв родителей</CardTitle>
-                    <CardDescription className="text-base">
-                      "Спасибо огромное! Наш Саша в 5 лет не выговаривал половину звуков. 
-                      За полгода занятий речь стала чистой и понятной. Теперь он с удовольствием 
-                      рассказывает стихи!"
-                    </CardDescription>
-                    <p className="text-sm text-muted-foreground mt-3">— Мама Саши, средняя группа</p>
-                  </div>
-                </div>
-              </CardHeader>
-            </Card>
-
-            <Card className="bg-gradient-to-br from-secondary/5 to-accent/5 border-2 border-secondary/20 animate-fade-in">
-              <CardHeader>
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-full bg-secondary/10 flex items-center justify-center flex-shrink-0">
-                    <Icon name="Heart" size={24} className="text-secondary" />
-                  </div>
-                  <div>
-                    <CardTitle className="mb-2">Благодарность</CardTitle>
-                    <CardDescription className="text-base">
-                      "Наша Маша была очень застенчивой и боялась говорить. Благодаря игровым 
-                      занятиям она раскрылась, речь улучшилась, и появилась уверенность в себе!"
-                    </CardDescription>
-                    <p className="text-sm text-muted-foreground mt-3">— Родители Маши, старшая группа</p>
-                  </div>
-                </div>
-              </CardHeader>
-            </Card>
+          <div className="text-center">
+            <Button size="lg" variant="outline" className="gap-2">
+              <Icon name="Images" size={20} />
+              Посмотреть все фото
+            </Button>
           </div>
         </div>
       </section>
